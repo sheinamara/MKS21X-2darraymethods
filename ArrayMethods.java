@@ -4,6 +4,10 @@ public class ArrayMethods{
    */
    public static int rowSum(int[][] ary, int x){
      int finale = 0;
+     // ADDED AFTER TESTING WITH SECONDRIVER
+     if (x >= ary.length){
+       return 0;
+     }
      for (int i = 0; i < ary[x].length; i++){
        finale += ary[x][i];
      }
@@ -45,7 +49,7 @@ public class ArrayMethods{
      }
      int[] finale = new int[longest]; // the new array's length has to be "longest"
      for (int x = 0; x < longest; x++){
-       finale[x] = columnSum(ary, x); // same as rows 
+       finale[x] = columnSum(ary, x); // same as rows
      }
      return finale;
    }
@@ -54,14 +58,35 @@ public class ArrayMethods{
     //Index i of the return array contains the sum of elements in column i, ignoring any rows that are too short.
     //The length of the returned array should be the length of the LONGEST array in ary.
 
-
    /*
    *PART 3 - use prior methods where appropriate
    */
-//   public static boolean isRowMagic(int[][] ary){}
-     //checks if the array is row-magic (this means that every row has the same row sum).
+   public static boolean isRowMagic(int[][] ary){
+     // we can make an array of the rowSums and loop through to check if it's the same
+     int magicFoo = allRowSums(ary)[0]; // use first element in the array to check
+     boolean magical = true;
+     for (int i = 0; i < allRowSums(ary).length; i++){
+       if (allRowSums(ary)[i] != magicFoo){
+         magical = false;
+         return magical;
+       }
+     }
+     return magical;
+   }
+   //checks if the array is row-magic (this means that every row has the same row sum).
 
-//   public static boolean isColumnMagic(int[][] ary){}
-    //checks if the array is column-magic (this means that every column has the same column sum).
+   public static boolean isColumnMagic(int[][] ary){
+     // similar method as isRowMagic
+     int magicFoo = allColSums(ary)[0];
+     boolean magical = true;
+     for (int i = 0; i < allColSums(ary).length; i++){
+       if (allColSums(ary)[i] != magicFoo){
+         magical = false;
+         return magical;
+       }
+     }
+     return magical;
+   }
+   //checks if the array is column-magic (this means that every column has the same column sum).
 
 }

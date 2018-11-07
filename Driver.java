@@ -68,7 +68,6 @@ public class Driver{
     System.out.println(printArray(ArrayMethods.allRowSums(a)));
     System.out.println("Array of column sums: Should return [10, 24, 13, 6, 4]");
     System.out.println(printArray(ArrayMethods.allColSums(a)) + "\n\n");
-/*
     System.out.println("Testing Part 3\n");
     System.out.println("Testing whether each array has \"row magic\"");
     System.out.println("Array a: should return false");
@@ -81,6 +80,5 @@ public class Driver{
     System.out.println("Array c: should return true");
     System.out.println(ArrayMethods.isColumnMagic(c) + "\n");
     System.out.println("Woohoo good job!");
-*/
   }
 }
