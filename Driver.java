@@ -62,13 +62,13 @@ public class Driver{
     System.out.println(ArrayMethods.columnSum(a,3));
     System.out.println("Fifth Column: should return 4");
     System.out.println(ArrayMethods.columnSum(a,4) + "\n\n");
-/*
     System.out.println("Testing Part 2\n");
     System.out.println("Putting all the row and column sums into arrays");
     System.out.println("Array of row sums: Should return [10, 21, 26]");
     System.out.println(printArray(ArrayMethods.allRowSums(a)));
     System.out.println("Array of column sums: Should return [10, 24, 13, 6, 4]");
     System.out.println(printArray(ArrayMethods.allColSums(a)) + "\n\n");
+/*
     System.out.println("Testing Part 3\n");
     System.out.println("Testing whether each array has \"row magic\"");
     System.out.println("Array a: should return false");
